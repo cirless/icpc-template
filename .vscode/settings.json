@@ -2,6 +2,7 @@
     "files.associations": {
         "algorithm": "cpp",
         "bitset": "cpp",
-        "string": "cpp"
+        "string": "cpp",
+        "utility": "cpp"
     }
 }
