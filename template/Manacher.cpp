@@ -14,7 +14,7 @@ const int maxn = 5e5 + 5;
 
 class Manacher {
    public:
-    int n;
+    int n, maxLen, start;
     vector<int> p;
     string s, s2;
 
@@ -68,8 +68,13 @@ class Manacher {
                 start = (i - maxLen) / 2;
             }
         }
+        this->maxLen = maxLen;
+        this->start = start;
     }
+
+    string getMaxLenSubtring() { return s.substr(start, maxLen); }
 };
+
 bool pd(string s, int m) {
     // 特判
     if (s.size() < 2) {
