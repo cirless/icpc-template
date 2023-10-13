@@ -19,11 +19,11 @@ struct DisjointSet {
             fa[i] = i;
         }
     }
+    // 使用路径压缩
     int findfa(int x) {
         if (fa[x] != x)
-            return findfa(fa[x]);
-        else
-            return x;
+            fa[x] = findfa(fa[x]);
+        return fa[x];
     }
     // 判断是否在一个集合内
     bool iscon(int x, int y) {
